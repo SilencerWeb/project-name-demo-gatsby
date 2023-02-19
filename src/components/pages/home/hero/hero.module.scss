@@ -1,0 +1,50 @@
+.wrapper {
+  padding: 300px;
+  background: pink;
+
+  @include lg-down {
+    padding: 200px;
+    background: red;
+  }
+
+  @include xs-down {
+    padding: 0;
+  }
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 100px;
+
+  @include md-down {
+    font-size: 50px;
+  }
+}
+
+.description {
+  font-size: 20px;
+
+  @include sm-down {
+    font-size: 18px;
+  }
+}
+
+.button {
+  padding: 10px;
+  background: $color-primary;
+  transition: background $transition-base;
+
+  @include xs-down {
+    display: block;
+    width: 100%;
+    padding: 20px;
+  }
+
+  &:hover {
+    background: brown;
+  }
+}
